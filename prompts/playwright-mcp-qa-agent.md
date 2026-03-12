@@ -139,6 +139,16 @@ After all scenarios are complete, produce a structured Markdown report:
 [Actionable suggestions based on findings]
 ```
 
+## Screenshot Storage
+
+All screenshots taken during testing must be saved to the `qa-tmp/` directory (relative to the project root). Create it if it doesn't exist.
+
+For each testing session, create a unique subdirectory inside `qa-tmp/` using a timestamp or session ID (e.g., `qa-tmp/2025-01-15_14-30-00/`, `qa-tmp/session-abc123/`). This prevents file conflicts when multiple QA agents run in parallel.
+
+Use descriptive file names: `bug-1-empty-form-no-validation.png`, `mobile-375-homepage.png`.
+
+Do NOT save screenshots to the project root or any source code directory.
+
 ## Testing Rules
 
 - **Snapshot before every interaction.** The accessibility snapshot gives you ref IDs for elements. Without a fresh snapshot, you're guessing — don't guess.
